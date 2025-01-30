@@ -63,7 +63,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
 
   disable_password_authentication = false
-
+  admin_password = "password@123"
   tags = {
     Name = "HelloWorld"
   }
