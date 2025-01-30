@@ -66,3 +66,5 @@ resource "azurerm_linux_virtual_machine" "vm" {
     Name = "HelloWorld"
   }
 }
+
+disable_password_authentication = false
