@@ -62,9 +62,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
     version   = "latest"
   }
 
+  disable_password_authentication = false
+
   tags = {
     Name = "HelloWorld"
   }
 }
 
-disable_password_authentication = false
+
