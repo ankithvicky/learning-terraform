@@ -1,11 +1,18 @@
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0"
     }
   }
 }
 
-provider "aws" {
-  region  = "us-west-2"
+provider "azurerm" {
+  features {}
+}
+
+
+resource "azurerm_resource_group" "firstrg" {
+  name     = "first-rg"
+  location = "Central India" # ✅ Azure India Region
 }
